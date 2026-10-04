@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, My Love thalli ❤️</title>
+<meta name="description" content="A little universe made for someone special.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08070b; --card:rgba(255,255,255,.07); --text:#fff7f5;
+  --muted:#cdbfbe; --accent:#ff6f91; --accent2:#ffc0cb; --gold:#f7d48b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:
+radial-gradient(circle at 15% 15%,rgba(255,71,120,.16),transparent 30%),
+radial-gradient(circle at 85% 70%,rgba(145,71,255,.14),transparent 30%),
+linear-gradient(135deg,#08070b,#140a12 50%,#07070b)}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;opacity:.7;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.15;transform:scale(.5)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 5%;backdrop-filter:blur(15px);background:rgba(8,7,11,.35);border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font-family:"Cormorant Garamond";font-size:28px;font-weight:600}
+.logo span{color:var(--accent)}
+nav a{color:#eee;text-decoration:none;font-size:12px;margin-left:22px;opacity:.8}
+nav a:hover{color:#fff;opacity:1}
+section{min-height:100vh;padding:110px 7%;display:flex;align-items:center;justify-content:center}
+.hero{text-align:center;position:relative}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;color:var(--accent2);font-size:11px;margin-bottom:25px}
+h1,h2,h3{font-family:"Cormorant Garamond",serif}
+h1{font-size:clamp(65px,13vw,170px);line-height:.78;font-weight:500}
+.hero h1 em{font-style:normal;color:var(--accent);text-shadow:0 0 50px rgba(255,80,130,.4)}
+.hero p{max-width:600px;margin:35px auto;color:var(--muted);line-height:1.8;font-size:15px}
+.btn{display:inline-flex;padding:13px 23px;border:1px solid rgba(255,255,255,.18);border-radius:99px;color:#fff;text-decoration:none;background:rgba(255,255,255,.07);backdrop-filter:blur(10px);transition:.3s}
+.btn:hover{transform:translateY(-3px);background:rgba(255,111,145,.15);border-color:rgba(255,111,145,.5)}
+.scroll{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:3px;color:#887d7e}
+.container{max-width:1100px;width:100%}
+.section-head{margin-bottom:50px}
+.section-head .eyebrow{margin-bottom:12px}
+.section-head h2{font-size:clamp(45px,7vw,85px);font-weight:500}
+.section-head p{color:var(--muted);max-width:650px;line-height:1.8;margin-top:12px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.story-card{padding:35px;border:1px solid rgba(255,255,255,.1);background:var(--card);border-radius:25px;backdrop-filter:blur(15px)}
+.story-card h3{font-size:38px;margin-bottom:12px}
+.story-card p{color:var(--muted);line-height:1.9}
+.quote{font-family:"Cormorant Garamond";font-size:42px;line-height:1.1;color:#fff;margin-top:25px}
+.timeline{border-left:1px solid rgba(255,111,145,.35);margin-left:10px;padding-left:30px}
+.event{position:relative;margin-bottom:35px}
+.event:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--accent);left:-36px;top:7px;box-shadow:0 0 20px var(--accent)}
+.event small{color:var(--accent2);letter-spacing:2px}
+.event h3{font-size:30px;margin:6px 0}
+.event p{color:var(--muted);line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.photo{height:390px;border-radius:20px;overflow:hidden;position:relative;background:#171218}
+.photo:nth-child(2){height:470px;margin-top:45px}
+.photo:nth-child(3){height:330px}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.photo:hover img{transform:scale(1.07)}
+.photo span{position:absolute;bottom:18px;left:18px;background:rgba(0,0,0,.5);padding:7px 11px;border-radius:99px;font-size:11px;backdrop-filter:blur(10px)}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.reason{min-height:190px;padding:25px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);transition:.35s}
+.reason:hover{transform:translateY(-7px);border-color:rgba(255,111,145,.35)}
+.reason .num{font-size:12px;color:var(--accent);letter-spacing:2px}
+.reason h3{font-size:30px;margin:20px 0 8px}
+.reason p{font-size:13px;line-height:1.7;color:var(--muted)}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.count{padding:25px 10px;text-align:center;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.count strong{font-family:"Cormorant Garamond";font-size:45px;font-weight:500;display:block}
+.count span{font-size:10px;letter-spacing:2px;color:var(--muted)}
+.letter{max-width:800px;margin:auto;padding:45px;border-radius:30px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 80px rgba(0,0,0,.25)}
+.letter h2{font-size:55px;margin-bottom:25px}
+.letter p{color:#ddd;line-height:2;font-family:"Cormorant Garamond";font-size:21px;margin-bottom:17px}
+.signature{color:var(--accent2);font-family:"Cormorant Garamond";font-size:28px;margin-top:30px}
+.secret{text-align:center}
+.secret-box{max-width:650px;margin:auto;padding:50px 30px;border:1px solid rgba(255,255,255,.12);border-radius:30px;background:radial-gradient(circle at center,rgba(255,80,130,.13),transparent 65%)}
+.heart{font-size:75px;cursor:pointer;display:inline-block;filter:drop-shadow(0 0 25px rgba(255,80,130,.5));transition:.3s}
+.heart:hover{transform:scale(1.12)}
+#secretMessage{display:none;margin-top:25px;font-family:"Cormorant Garamond";font-size:32px;line-height:1.3}
+footer{text-align:center;padding:40px;color:#776d70;font-size:11px;letter-spacing:2px}
+@media(max-width:800px){
+ nav a{display:none}
+ section{padding:100px 6%}
+ .story{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .photo,.photo:nth-child(2),.photo:nth-child(3){height:300px;margin:0}
+ .reasons{grid-template-columns:1fr}
+ .counter{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){.gallery{grid-template-columns:1fr}.photo{height:390px!important}.letter{padding:28px}.letter h2{font-size:45px}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<nav>
+  <div class="logo">for <span>you</span> ♡</div>
+  <div>
+    <a href="#story">Story</a><a href="#memories">Memories</a><a href="#reasons">Reasons</a><a href="#letter">Letter</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">A little universe made for you</div>
+    <h1>Dear <em>Tulasi Esther</em>,</h1>
+    <p>To My Love👩‍❤️‍💋‍👨, My Darling🌹🌹💞💞, My Baby🍼🍼, My Future Wife ❤️😘😘 .</p>
+    <a class="btn" href="#story">Open our story ↓</a>
+  </div>
+  <div class="scroll">SCROLL TO DISCOVER</div>
+</section>
+
+<section id="story">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Chapter 01</div><h2>manga i may not able to give expensive gifts but a little gift of my effort .</h2>
+    <p>its all stated with a classmate but now how it came so far became a soulmate .</p>
+  </div>
+  <div class="story">
+    <div class="story-card">
+      <h3>my love dont have words to express my.</h3>
+      <p>Happy Birthday to the woman who has slowly become one of the most beautiful parts of my life. ❤️ Today is not just your birthday. It feels like a celebration of the day God brought into this world the person who would one day become so incredibly special to me. And this year, your birthday feels even more special because we are also celebrating one beautiful year of us. One year of conversations, laughter, little arguments, understanding, missing each other, forgiving each other, supporting each other, and creating memories that I never want to forget. .</p>
+      <div class="quote">“And somehow, I found my favorite person.”</div>
+    </div>
+    <div class="timeline">
+      <div class="event"><small>I want to keep choosing you.</small><h3>my forever best choice</h3><p>Not only on the beautiful days when everything feels perfect, but also on the difficult days when we have to choose patience, understanding, forgiveness, and love..</p></div>
+      <div class="event"><small>I don't want a perfect love story.</small><h3>I want our love story.</h3><p>The kind where two imperfect people keep learning each other, growing together, laughing together, praying together, sometimes disagreeing, sometimes being stubborn, but still finding their way back to each other. And maybe one day, when we look back at this first year, we'll smile and say, "Look how far we have come." ❤️.</p></div>
+      <div class="event"><small>i may be not able to provides all ur need </small><h3>but i will try to be the person who stands with u always</h3><p>manga sorry to say, u chosed a fianancially poor person but i am giving u assurance that u chose a person who is rich in loving  u after God .</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="memories">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Chapter 02</div><h2>my Baby, my sweet Darling🌹🌹💞💞.</h2>
+    <p>thank u for being with me so far, chosing me always even when i am wrong also u correct me, and standing for me always.</p>
+  </div>
+  <div class="gallery">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=900&q=85"><span>And baby, I hope you never forget that you deserve to be loved—not only when you're happy and everything is going well, but also when you're tired, confused, emotional, or having a difficult day. When you don't feel beautiful, I hope you remember that I still see you as beautiful. ♡</span></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85"><span>If someday I get the privilege of putting a ring on your finger and calling you my wife, I don't want that to be the end of our love story. I want it to be the beginning of an even more beautiful chapter. I want to wake up beside you someday and realize that the girl I once wished for became the woman lying next to me.</span></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=900&q=85"><span>When you doubt yourself, I hope you remember that I believe in you. When you're tired, I hope you know that you don't always have to be strong with me. And when life becomes difficult, I hope you know that you don't have to face everything alone.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="reasons">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Chapter 03</div><h2>I love you my everything.</h2>
+    <p>I want to celebrate your birthdays, not just through messages, but beside you. I want to see your smile in person. I want to annoy you. I want to make you laugh when you're angry with me. I want to hold your hand when life gets difficult. I want to celebrate your victories as if they were my own. I want to pray with you. I want to build a home with you—not just a house, but a place filled with love, peace, laughter, faith, and countless memories. And yes… I want to grow old with you. Maybe someday we'll look completely different, have a hundred responsibilities, and complain about our knees hurting 😂❤️. But I hope we'll still look at each other and remember these days—the days when our hearts were young and we were dreaming about a future together..</p>
+  </div>
+  <div class="reasons">
+    <div class="reason"><div class="num">01</div><h3>Your smile.</h3><p>Because somehow it can make an ordinary day feel lighter.</p></div>
+    <div class="reason"><div class="num">02</div><h3>Your heart.</h3><p>Because the way you care for people tells me so much about you.</p></div>
+    <div class="reason"><div class="num">03</div><h3>Your laugh.</h3><p>Because I could probably listen to it forever.</p></div>
+    <div class="reason"><div class="num">04</div><h3>Your courage.</h3><p>For every difficult thing you keep facing.</p></div>
+    <div class="reason"><div class="num">05</div><h3>The little things.</h3><p>Your habits, expressions, messages, and all those tiny details.</p></div>
+    <div class="reason"><div class="num">06</div><h3>Simply you.</h3><p>Not because you are perfect. Because you are you.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Chapter 04</div><h2>Time with you.</h2>
+    <p>thank for choosing me since.</p>
+  </div>
+  <div class="counter">
+    <div class="count"><strong id="days">0</strong><span>DAYS</span></div>
+    <div class="count"><strong id="hours">0</strong><span>HOURS</span></div>
+    <div class="count"><strong id="minutes">0</strong><span>MINUTES</span></div>
+    <div class="count"><strong id="seconds">0</strong><span>SECONDS</span></div>
+  </div>
+</div>
+</section>
+
+<section id="letter">
+<div class="container">
+ <div class="letter">
+   <div class="eyebrow">A letter from me</div>
+   <h2>To my favorite person,</h2>
+   <p> my future wife😍😘😘😘🥰🥰,</p>
+   <p>May this new year of your life bring you peace, joy, beautiful opportunities, answered prayers, and everything your heart quietly wishes for. And may we have many more birthdays to celebrate together. Today, I'm celebrating the day you were born..</p>
+   <p>But secretly, I'm also celebrating the day my future became a little more beautiful because you are in it. Happy Birthday, my love.💞💝🫀 Happy One Year to us.👩‍❤️‍💋‍👨 Happy birthday to my darling, my baby, my everything, and hopefully one day…</p>
+   <p>Thank you for being part of my story. I cannot promise that every chapter will be perfect, but I can promise that the memories we create will always matter to me my beautiful wife. ❤️💞💐 With all my love,😘😘😘🌺🌺💕💝💝.</p>
+   <div class="signature">Forever yours,<br><strong>❤️( Bangaram) Mr. Sushil ❤️</strong></div>
+ </div>
+</div>
+</section>
+
+<section class="secret">
+<div class="container">
+ <div class="secret-box">
+   <div class="eyebrow">One last thing...</div>
+   <div class="heart" id="heart">❤️</div>
+   <h2>There is a secret here.</h2>
+   <p style="color:var(--muted);margin-top:10px">Tap the heart.</p>
+   <div id="secretMessage">“If I could choose again, in every lifetime, I'd still look for you.” ❤️</div>
+ </div>
+</div>
+</section>
+
+<footer>MADE WITH LOVE · EDIT THIS WEBSITE AND MAKE IT YOURS ♡</footer>
+
+<script>
+/* =========================
+   EASY EDIT AREA
+   Change this date to your real relationship start date.
+   Format: YYYY-MM-DDTHH:MM:SS
+   ========================= */
+const relationshipStart = new Date("2025-10-06T00:00:00");
+
+function updateCounter(){
+  let diff=Math.max(0,new Date()-relationshipStart);
+  let sec=Math.floor(diff/1000);
+  document.getElementById("days").textContent=Math.floor(sec/86400);
+  document.getElementById("hours").textContent=Math.floor(sec%86400/3600);
+  document.getElementById("minutes").textContent=Math.floor(sec%3600/60);
+  document.getElementById("seconds").textContent=sec%60;
+}
+setInterval(updateCounter,1000); updateCounter();
+
+document.getElementById("heart").addEventListener("click",()=>{
+ const m=document.getElementById("secretMessage");
+ m.style.display=m.style.display==="block"?"none":"block";
+});
+
+/* Create the background stars */
+const stars=document.getElementById("stars");
+for(let i=0;i<90;i++){
+ const s=document.createElement("span");
+ s.className="star";
+ s.style.left=Math.random()*100+"%";
+ s.style.top=Math.random()*100+"%";
+ s.style.animationDelay=Math.random()*3+"s";
+ s.style.opacity=.2+Math.random()*.7;
+ stars.appendChild(s);
+}
+</script>
+</body>
+</html>
